@@ -16,6 +16,9 @@ python >=3.6 pytorch =1.4.0
 ### Dataset
 We use MSCOCO2017 and Flickr30k datasets. For the first part we follow the same configurations as in [Our previous work](https://github.com/sofianeElguendouz/RepSpaceExplanation4IC). For the second part, it is mendatory to download the testsets (the already encoded images) that could be found in this [google-drive repo](https://drive.google.com/drive/folders/14nmyQD3Zr7EPNyqXNLG4y8vgXClHq8Df?usp=sharing).
 
+### Checkpoints
+Please find the checkpoints for both models trained on coco2017 and flickr30k [here](https://drive.google.com/drive/folders/17qRd21PZvG7YqfT7S1FQmvD6dq1xZJey?usp=sharing)
+
 ### How to use this repo
 For the first part of this work, we refer to our previous implementation that could be found [here](https://github.com/sofianeElguendouz/RepSpaceExplanation4IC). For the second part, there are several possible actions, please execute the file explain.py with the following arguments (/ to separate the supported argument values) --dataset flickr30k/coco2017 --mode expl/eval --expl_model lrp/lime1/lime2/lime3/lime4/lime5/lime_5obj/lime_8obj --eval_type correlation/ablation --abl_type ob/vf_X_min/max/15, X being the number of objects/visual features to ablate.
 1. Generate explanations for coco2017 testset using lrp method: explain.py --mode expl --expl_model lrp
