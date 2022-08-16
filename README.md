@@ -21,6 +21,6 @@ Please find the checkpoints for both models trained on coco2017 and flickr30k [h
 
 ### How to use this repo
 For the first part of this work, we refer to our previous implementation that could be found [here](https://github.com/sofianeElguendouz/RepSpaceExplanation4IC). For the second part, there are several possible actions, please execute the file explain.py with the following arguments (/ to separate the supported argument values) --dataset flickr30k/coco2017 --mode expl/eval --expl_model lrp/lime1/lime2/lime3/lime4/lime5/lime_5obj/lime_8obj --eval_type correlation/ablation --abl_type ob/vf_X_min/max/15, X being the number of objects/visual features to ablate. lime1: corresponds to BU-LIME-1-2 in the paper, lime2: corresponds to BU-LIME-5, lime_5obj: BU-LIME-5-OBJ, lime_8obj: BU-LIME-8-OBJ.
-1. Generate explanations for coco2017 testset using lrp method: explain.py --mode expl --expl_model lrp
-2. Evaluate the quality of the explanations using the correlation measure : explain.py --mode eval --expl_model lrp --eval_type correlation
-3. Evaluate the quality of the explanations using the ablation study (ablation of top 6 visual features using min saturation): explain.py --mode eval --expl_model lrp --eval_type ablation --abl_type vf_6_min
+1. Generate explanations for coco2017 testset using lrp method: explain.py --dataset coco2017 --mode expl --expl_model lrp
+2. Evaluate the quality of the explanations using the correlation measure : explain.py --dataset coco2017 --mode eval --expl_model lrp --eval_type correlation
+3. Evaluate the quality of the explanations using the ablation study (ablation of top 6 visual features using min saturation): explain.py --dataset coco2017 --mode eval --expl_model lrp --eval_type ablation --abl_type vf_6_min
